@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+          <img src="logo.png" alt="Yerbana">
+            <div>
+            <h1>YERBANA</h1>
+            <p>Medical Herbs</p>
+            </div>
+        </div>
+        <div class="search-cart">
+            <input type="text" placeholder="🔍  Barra de búsqueda">
+            <span class="carrito">🛒</span>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">🏠</a>
+        <a href="infusiones.html">INFUSIONES</a>
+        <a href="#">HIERBAS</a>
+        <a href="#">SEMILLAS</a>
+        <a href="#">BLOG</a>
+        <a href="registro.html">REGÍSTRATE / INICIA SESIÓN</a>
+        <a href="#">CONTACTANOS</a>
+    </nav>
+
+    <section class="slider" id="slider">
+        <div class="slides">
+            <img src="slider1.jpg" alt="">
+            <img src="slider2.jpg" alt="">
+            <img src="slider3.jpg" alt="">
+            <img src="slider4.jpg" alt="">
+        </div>
+
+        <button class="flecha izquierda" onclick="moverSlide(-1)">&#10094;</button>
+        <button class="flecha derecha" onclick="moverSlide(1)">&#10095;</button>
+    </section>
+
+
+
+    <main>
+        <section class="contenido">
+        <div class="imagen">
+            <img src="infusiones.png" alt="Infusiones refrescantes">
+            <p class="enlace">Accede a nuestras infusiones aquí</p>
+        </div>
+        <div class="texto">
+            <h2>Hierbas Medicinales</h2>
+            <p>
+            En Yerbana creemos en el poder de la naturaleza para cuidar de tu bienestar.
+            Desde tiempos ancestrales, las hierbas medicinales han sido aliadas para aliviar,
+            fortalecer y equilibrar cuerpo y mente.
+            </p>
+            <div class="ofrecemos">
+            <p>🌿 Qué ofrecemos:</p>
+            <ul>
+                <li>Hierbas medicinales frescas y secas.</li>
+                <li>Infusiones artesanales.</li>
+                <li>Mezclas exclusivas.</li>
+                <li>Consejos y artículos.</li>
+            </ul>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <section id="contenedor-video" style="
+        width: 90%;
+        max-width: 1100px;
+        margin: 50px auto;
+        background: #f8fdf1;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        display: none; /* se oculta hasta que cargue */">
+        <video id="video-infusiones"
+            muted
+            autoplay
+            loop
+            playsinline
+            style="width:100%; border-radius:12px;">
+        </video>
+    </section>
+  
+    <footer>
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Yerbana logo">
+                <div>
+                <h3>YERBANA</h3>
+                <p>Medical Herbs</p>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Inicio</a>
+                <a href="#">Sobre nosotros</a>
+                <a href="#">Hierbas</a>
+                <a href="infusiones.html">Infusiones</a>
+            </div>
+            <div class="footer-iconos">
+                <span>✉️</span>
+                <span>📞</span>
+                <span>📸</span>
+                <span>💬</span>
+            </div>
+        </div>
+    
+    <a class="copyright" href="file:///C:/Users/fdelu/Desktop/dise%C3%B1o/index.html">Yerbana</a> © 2025 by <a href="https://creativecommons.org">Fernando de Luque</a> is licensed under <a href="https://creativecommons.org/licenses/by-nd/4.0/">CC BY-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+
+    </footer>
+
+    <audio id="musicaFondo" autoplay loop>
+        <source src="The_Gates_Of_Hell.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+    (function() {
+        // --- Audio: volumen y persistencia de tiempo ---
+        const audio = document.getElementById('musicaFondo');
+
+        // Restaurar tiempo guardado (si existe)
+        const tiempoGuardado = localStorage.getItem('tiempoMusica');
+        if (tiempoGuardado) audio.currentTime = parseFloat(tiempoGuardado);
+
+        audio.volume = 0.2;
+
+        // Guardar posición cada 500ms
+        setInterval(() => {
+            localStorage.setItem('tiempoMusica', audio.currentTime);
+        }, 500);
+    })();
+
+    // --- DOM ready: vídeo y slider ---
+    document.addEventListener('DOMContentLoaded', () => {
+        // Slider: inicialización y función pública moverSlide
+        (function initSlider() {
+            const slides = document.querySelector('.slides');
+            if (!slides) return;
+            const total = slides.children.length;
+            let indice = 0;
+
+            slides.style.transform = 'translateX(0%)';
+
+            window.moverSlide = function(direccion) {
+                indice += direccion;
+                if (indice < 0) indice = total - 1;
+                if (indice >= total) indice = 0;
+                slides.style.transform = `translateX(-${indice * 100}%)`;
+            };
+        })();
+
+        // Vídeo: añadir source y forzar reproducción tras 500ms
+        setTimeout(() => {
+            const contenedor = document.getElementById('contenedor-video');
+            const video = document.getElementById('video-infusiones');
+            if (!video || !contenedor) return;
+
+            const fuente = document.createElement('source');
+            fuente.src = 'te.mp4';
+            fuente.type = 'video/mp4';
+            video.appendChild(fuente);
+
+            contenedor.style.display = 'block';
+            video.muted = true;
+            video.play();
+        }, 500);
+    });
+    </script>
+
+</body>
+</html>

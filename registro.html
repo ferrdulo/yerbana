@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registro</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <audio id="musicaFondo" autoplay loop>
+    <source src="The_Gates_Of_Hell.mp3" type="audio/mpeg">
+    </audio>
+
+    <header>
+        <div class="logo">
+        <img src="logo.png" alt="Yerbana">
+            <div>
+            <h1>YERBANA</h1>
+            <p>Medical Herbs</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">🏠</a>
+        <a href="infusiones.html">INFUSIONES</a>
+        <a href="#">HIERBAS</a>
+        <a href="#">SEMILLAS</a>
+        <a href="#">BLOG</a>
+        <a href="registro.html">REGÍSTRATE / INICIA SESIÓN</a>
+        <a href="#">CONTACTANOS</a>
+    </nav>
+
+    <main style="display: flex; justify-content: center; margin-top: 50px;">
+        <div style="
+            background: #f8fdf1;
+            padding: 40px;
+            border-radius: 15px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            
+            <h2 style="color:#7ba23b; margin-bottom: 20px;">Accede a tu cuenta</h2>
+            
+            <input type="text" placeholder="Correo electrónico" style="width:100%; padding:10px; border-radius:10px; border:1px solid #dce9d1; margin-bottom: 15px;">
+            <input type="password" placeholder="Contraseña" style="width:100%; padding:10px; border-radius:10px; border:1px solid #dce9d1; margin-bottom: 20px;">
+            
+            <button style="
+                background:#7ba23b; 
+                color:white;
+                padding:12px 20px;
+                border:none; 
+                border-radius:12px;
+                width:100%;
+                cursor:pointer;">
+                Iniciar sesión
+            </button>
+
+            <p style="margin-top: 20px; font-size:14px;">¿No tienes cuenta?</p>
+            <button style="
+                background:transparent; 
+                color:#7ba23b;
+                padding:10px 20px;
+                border:2px solid #7ba23b; 
+                border-radius:12px;
+                width:100%;
+                cursor:pointer;">
+                Crear cuenta
+            </button>
+        </div>
+    </main>
+
+    <script>
+    const audio = document.getElementById("musicaFondo");
+
+    // Recuperar el tiempo guardado
+    const tiempoGuardado = localStorage.getItem("tiempoMusica");
+    if (tiempoGuardado) {
+        audio.currentTime = parseFloat(tiempoGuardado);
+    }
+
+    audio.volume = 0.2;
+
+    // Guardar el tiempo cada medio segundo
+    setInterval(() => {
+        localStorage.setItem("tiempoMusica", audio.currentTime);
+    }, 500);
+    </script>
+
+</body>
+</html>
