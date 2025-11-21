@@ -1,6 +1,19 @@
 /* -------------------------------------------------- */
 /* Estilos principales (fuente y ajustes generales) */
 /* -------------------------------------------------- */
+
+/* Animación de fade-in al cargar la página */
+body {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -43,6 +56,31 @@ header {
 }
 
 .carrito { font-size: 20px; color: #7bb661; }
+.carrito i {
+    color: #3b6b1c; /* verde oscuro bonito */
+    font-size: 22px;  /* opcional: más grande */
+}
+.footer-iconos a {
+  display: inline-block;
+  margin: 0 6px;
+  text-decoration: none;
+}
+
+.footer-iconos i {
+  color: #2f5216;       /* verde oscuro */
+  font-size: 18px;
+  padding: 8px;
+  background: #f7fce9;  /* fondo clarito opcional */
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  transition: transform .12s ease, background .12s ease;
+}
+
+.footer-iconos i:hover {
+  transform: translateY(-3px);
+  background: #eef7df;
+}
+
 
 /* ---------------- Menú ---------------- */
 nav {
@@ -108,6 +146,17 @@ footer {
 .copyright { color: #aaa; font-size: 14px; }
 
 /* ---------------- Infusiones (página específica) ---------------- */
+
+/* Efecto hover en productos */
+.producto {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
 /* Nota: existe otra regla `.contenido` arriba; ambas se mantienen para respetar el cascade */
 .contenido { display: flex; margin: 40px 60px; }
 
