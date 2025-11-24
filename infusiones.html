@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Infusiones</title>
   <link rel="icon" href="favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="estilo.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -133,23 +134,24 @@
         musica.volume = 0.2;
     </script>
 
-<script>
-  const audio = document.getElementById("musicaFondo");
+    <script>
+    const audio = document.getElementById("musicaFondo");
 
-  // Recuperar el tiempo guardado
-  const tiempoGuardado = localStorage.getItem("tiempoMusica");
-  if (tiempoGuardado) {
-    audio.currentTime = parseFloat(tiempoGuardado);
-  }
+    // Recuperar el tiempo guardado
+    const tiempoGuardado = localStorage.getItem("tiempoMusica");
+    if (tiempoGuardado) {
+        audio.currentTime = parseFloat(tiempoGuardado);
+    }
 
-  audio.volume = 0.2; // tu volumen
+    audio.volume = 0.2; // tu volumen
 
-  // Guardar el tiempo cada medio segundo
-  setInterval(() => {
-    localStorage.setItem("tiempoMusica", audio.currentTime);
-  }, 500);
-</script>
+    // Guardar el tiempo cada medio segundo
+    setInterval(() => {
+        localStorage.setItem("tiempoMusica", audio.currentTime);
+    }, 500);
+    </script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
