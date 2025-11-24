@@ -1,0 +1,53 @@
+header {
+  background-color: #f7fce9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.logo h1 {
+  color: #4b8b0f;
+  margin: 0;
+}
+
+.logo p {
+  color: #6ba329;
+  font-weight: bold;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* SEARCH + CARRITO */
+.search-cart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-cart input {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  background-color: #f1f7e8;
+  width: 220px;
+  outline: none;
+}
+
+/* CARRITO ICONO */
+.carrito {
+  font-size: 20px;
+  color: #2f6d14; // Verde oscurito (puedes cambiarlo)
+}
