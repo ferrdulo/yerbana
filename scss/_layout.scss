@@ -12,3 +12,14 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+/* Fade-in de cuando se carga la página web */
+body {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
