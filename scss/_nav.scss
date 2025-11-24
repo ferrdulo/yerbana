@@ -1,0 +1,22 @@
+nav {
+  background-color: $color-nav-bg; // si quieres creamos variable, sino pon el color
+  text-align: center;
+  padding: 10px;
+
+  a {
+    color: $color-verde-suave;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color .2s ease;
+
+    i {
+      margin-right: 5px;
+      color: $color-verde-suave;
+    }
+
+    &:hover {
+      color: $color-verde-oscuro;
+    }
+  }
+}
