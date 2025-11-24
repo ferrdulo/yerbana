@@ -18,8 +18,8 @@ body {
 
 /* Fade-in de cuando se carga la página web */
 body {
-  opacity: 0;
-  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0 !important;
+  animation: fadeIn 0.8s ease-out forwards !important;
 }
 
 @keyframes fadeIn {
@@ -97,5 +97,8 @@ nav a i {
 nav a:hover {
   color: #3b6b1c;
 }
+
+/* estilos del slider */
+/* estilos de productos */
 
 /*# sourceMappingURL=estilo.css.map */
