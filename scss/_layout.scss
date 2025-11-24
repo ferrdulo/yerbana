@@ -15,8 +15,8 @@ body {
 
 /* Fade-in de cuando se carga la página web */
 body {
-  opacity: 0 !important;
-  animation: fadeIn 0.8s ease-out forwards !important;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
 @keyframes fadeIn {

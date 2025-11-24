@@ -1,7 +1,35 @@
-/* -------------------------------------------------- */
-/* Estilos principales (fuente y ajustes generales) */
-/* -------------------------------------------------- */
-/* ---------------- Header ---------------- */
+@charset "UTF-8";
+/* HEADER */
+/* NAV */
+/* Layout general */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #4a4a4a;
+}
+
+/* Contenedor principal (para centrar y limitar ancho si lo necesitas luego) */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Fade-in de cuando se carga la página web */
+body {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 header {
   background-color: #f7fce9;
   display: flex;
@@ -9,24 +37,31 @@ header {
   align-items: center;
   padding: 15px 60px;
 }
-
-.logo {
+header .logo {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-
-.logo img {
+header .logo img {
   width: 60px;
   border-radius: 50%;
 }
-
-.logo h1 { color: #4b8b0f; margin: 0; }
-.logo p { color: #6ba329; font-weight: bold; margin: 0; font-size: 14px; }
-
-.search-cart { display: flex; align-items: center; gap: 10px; }
-
-.search-cart input {
+header .logo h1 {
+  color: #4b8b0f;
+  margin: 0;
+}
+header .logo p {
+  color: #6ba329;
+  font-weight: bold;
+  margin: 0;
+  font-size: 14px;
+}
+header .search-cart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+header .search-cart input {
   padding: 8px 15px;
   border-radius: 20px;
   border: none;
@@ -34,209 +69,36 @@ header {
   width: 220px;
   outline: none;
 }
-
-.carrito { font-size: 20px; color: #7bb661; }
-.carrito i {
-    color: #3b6b1c; /* verde oscuro bonito */
-    font-size: 22px;  /* opcional: más grande */
+header .search-cart .carrito {
+  font-size: 20px;
+  color: #7bb661;
 }
-.footer-iconos a {
-  display: inline-block;
-  margin: 0 6px;
-  text-decoration: none;
+header .search-cart .carrito i {
+  color: #4b8b0f;
+  font-size: 22px;
 }
 
-.footer-iconos i {
-  color: #2f5216;       /* verde oscuro */
-  font-size: 18px;
-  padding: 8px;
-  background: #f7fce9;  /* fondo clarito opcional */
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-  transition: transform .12s ease, background .12s ease;
-}
-
-.footer-iconos i:hover {
-  transform: translateY(-3px);
-  background: #eef7df;
-}
-
-
-/* ---------------- Menú ---------------- */
 nav {
   background-color: #f5fcd3;
   text-align: center;
   padding: 10px;
 }
-
 nav a {
   color: #7bb661;
   text-decoration: none;
   margin: 0 15px;
   font-weight: bold;
+  transition: color 0.2s ease;
 }
-
-/* ---------------- Main / Inicio ---------------- */
-main { display: flex; justify-content: center; margin: 50px 0; }
-
-.contenido { display: flex; gap: 60px; max-width: 1100px; }
-
-.imagen img { width: 480px; border-radius: 5px; }
-
-.enlace { color: #7bb661; margin-top: 15px; font-weight: bold; text-align: left; }
-
-.texto h2 { color: #6ba329; font-size: 26px; }
-.texto p { line-height: 1.6; }
-
-.ofrecemos { margin-top: 25px; }
-.ofrecemos p {
-  background-color: #f1f7e8;
-  display: inline-block;
-  padding: 6px 15px;
-  border-radius: 20px;
+nav a i {
+  margin-right: 5px;
   color: #7bb661;
-  font-weight: bold;
 }
-.ofrecemos ul { margin-top: 10px; }
-
-/* ---------------- Footer ---------------- */
-footer {
-  background-color: #fcfcfc;
-  border-top: 1px solid #ddd;
-  padding: 40px 0 15px;
-  text-align: center;
+nav a:hover {
+  color: #3b6b1c;
 }
 
-.footer-top { display: flex; justify-content: space-around; align-items: center; margin-bottom: 30px; }
+/* estilos del slider */
+/* estilos de productos */
 
-.footer-logo { display: flex; align-items: center; gap: 15px; }
-.footer-logo img { width: 60px; border-radius: 50%; }
-.footer-logo h3 { margin: 0; color: #4b8b0f; }
-
-.footer-links a { color: #8b83a2; text-decoration: none; margin: 0 10px; }
-
-.footer-icons span {
-  background-color: #f7fce9;
-  padding: 8px;
-  border-radius: 8px;
-  margin: 0 5px;
-  font-size: 18px;
-}
-
-.copyright { color: #aaa; font-size: 14px; }
-
-/* ---------------- Infusiones (página específica) ---------------- */
-
-/* Efecto hover en productos */
-.producto {
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-
-.producto:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
-
-/* Nota: existe otra regla `.contenido` arriba; ambas se mantienen para respetar el cascade */
-.contenido { display: flex; margin: 40px 60px; }
-
-.categorias {
-  width: 220px;
-  background-color: #f8fdf1;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.categorias h2 { color: #7ba23b; border-bottom: 1px solid #e3eed2; padding-bottom: 5px; }
-.categorias ul { list-style: none; padding: 0; }
-.categorias li { margin: 6px 0; color: #666; }
-
-/* ---------------- Productos ---------------- */
-.productos { flex-grow: 1; margin-left: 50px; }
-.productos h1 { color: #7ba23b; text-align: center; margin-bottom: 30px; }
-
-.grid-productos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-
-.producto {
-  background-color: #fff;
-  border: 1px solid #e6e6e6;
-  border-radius: 15px;
-  text-align: center;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-.producto img { width: 140px; height: 140px; object-fit: contain; }
-.producto h3 { color: #7ba23b; margin: 10px 0 5px 0; }
-.producto p { color: #a3b68a; }
-
-/* ---------------- Producto detalle ---------------- */
-.producto-detalle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-  padding: 60px 100px;
-  background-color: #fff;
-}
-
-.producto-img img { width: 400px; height: 400px; object-fit: cover; border-radius: 50%; }
-.producto-info { max-width: 600px; }
-
-.producto-info h2 { font-size: 48px; color: #7DB249; font-weight: 700; margin-bottom: 20px; }
-.producto-info .descripcion { color: #9E9BB7; font-size: 18px; line-height: 1.7; margin-bottom: 25px; }
-.producto-info .precio { font-size: 22px; color: #7DB249; font-weight: 600; margin-bottom: 10px; }
-.producto-info .disponibilidad { font-size: 18px; font-weight: 600; color: #7DB249; margin-bottom: 40px; }
-.producto-info .disponibilidad span { color: #9DCB54; }
-
-.botones { display: flex; gap: 25px; }
-.comprar, .carrito {
-  border-radius: 40px;
-  padding: 15px 40px;
-  font-size: 17px;
-  cursor: pointer;
-  border: 2px solid #7DB249;
-  transition: 0.3s;
-}
-
-.comprar { background: transparent; color: #7DB249; }
-.comprar:hover { background: #7DB249; color: white; }
-.carrito { color: white; border: none; }
-
-.producto a { text-decoration: none; color: inherit; }
-.producto a:hover { text-decoration: none; }
-.producto h3, .producto p { text-decoration: none !important; }
-
-/* ---------------- Slider ---------------- */
-.slider {
-  position: relative;
-  width: 100%;
-  max-width: 1100px;
-  height: 350px;
-  margin: 20px auto;
-  overflow: hidden;
-  border-radius: 15px;
-}
-
-/* .slides ocupa el ancho del contenedor; cada img será 100% del contenedor */
-.slides { display: flex; width: 100%; height: 100%; transition: transform 0.6s ease-in-out; }
-.slides img { flex: 0 0 100%; width: 100%; height: 100%; object-fit: cover; }
-
-/* Flechas */
-.flecha {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.4);
-  color: white;
-  border: none;
-  padding: 12px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 22px;
-  z-index: 10;
-  transition: 0.3s;
-}
-.flecha:hover { background: rgba(0,0,0,0.7); }
-.izquierda { left: 10px; }
-.derecha { right: 10px; }
+/*# sourceMappingURL=estilo.css.map */
