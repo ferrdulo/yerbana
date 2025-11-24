@@ -1,0 +1,14 @@
+/* Layout general */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #4a4a4a;
+}
+
+/* Contenedor principal (para centrar y limitar ancho si lo necesitas luego) */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
