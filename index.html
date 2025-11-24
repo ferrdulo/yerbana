@@ -146,15 +146,18 @@
         (function initSlider() {
             const slides = document.querySelector('.slides');
             if (!slides) return;
+
             const total = slides.children.length;
             let indice = 0;
 
+            // El contenedor se ajusta automáticamente al tamaño real
             slides.style.transform = 'translateX(0%)';
 
             window.moverSlide = function(direccion) {
                 indice += direccion;
                 if (indice < 0) indice = total - 1;
                 if (indice >= total) indice = 0;
+
                 slides.style.transform = `translateX(-${indice * 100}%)`;
             };
         })();
