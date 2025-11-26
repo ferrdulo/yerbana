@@ -1,0 +1,71 @@
+$bg: #f8ffef;
+$verde: #3f7f13;
+$verde-suave: #e7f5d8;
+$gris: #444;
+
+body {
+  background: $bg;
+}
+
+/* TARJETA PRINCIPAL */
+.payment-card {
+  width: 100%;
+  max-width: 520px;
+  background: white;
+  padding: 35px 40px;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+/* TÍTULOS */
+.payment-card h4 {
+  color: $verde;
+  font-weight: 600;
+}
+
+/* INPUTS */
+.payment-card .form-control {
+  border: 1px solid $verde-suave;
+  border-radius: 10px;
+  height: 48px;
+  font-size: 15px;
+
+  &:focus {
+    border-color: $verde;
+    box-shadow: 0 0 0 2px rgba($verde, 0.25);
+  }
+}
+
+/* TARJETA DE PAGO */
+.card-box {
+  background: $verde-suave;
+  padding: 20px;
+  border-radius: 14px;
+  margin-top: 10px;
+}
+
+/* CHECKBOX */
+.save-check {
+  width: 18px;
+  height: 18px;
+  accent-color: $verde;
+}
+
+/* BOTÓN DE PAGO */
+.btn-pagar {
+  width: 100%;
+  background: $verde;
+  color: white;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 18px;
+  transition: 0.2s;
+
+  &:hover {
+    background: darken($verde, 7%);
+  }
+
+  i {
+    margin-right: 7px;
+  }
+}

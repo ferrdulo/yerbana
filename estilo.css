@@ -665,4 +665,68 @@ footer .footer-top {
   padding: 40px 80px;
 }
 
+body {
+  background: #f8ffef;
+}
+
+/* TARJETA PRINCIPAL */
+.payment-card {
+  width: 100%;
+  max-width: 520px;
+  background: white;
+  padding: 35px 40px;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* TÍTULOS */
+.payment-card h4 {
+  color: #3f7f13;
+  font-weight: 600;
+}
+
+/* INPUTS */
+.payment-card .form-control {
+  border: 1px solid #e7f5d8;
+  border-radius: 10px;
+  height: 48px;
+  font-size: 15px;
+}
+.payment-card .form-control:focus {
+  border-color: #3f7f13;
+  box-shadow: 0 0 0 2px rgba(63, 127, 19, 0.25);
+}
+
+/* TARJETA DE PAGO */
+.card-box {
+  background: #e7f5d8;
+  padding: 20px;
+  border-radius: 14px;
+  margin-top: 10px;
+}
+
+/* CHECKBOX */
+.save-check {
+  width: 18px;
+  height: 18px;
+  accent-color: #3f7f13;
+}
+
+/* BOTÓN DE PAGO */
+.btn-pagar {
+  width: 100%;
+  background: #3f7f13;
+  color: white;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 18px;
+  transition: 0.2s;
+}
+.btn-pagar:hover {
+  background: rgb(47.5952054795, 95.945890411, 14.354109589);
+}
+.btn-pagar i {
+  margin-right: 7px;
+}
+
 /*# sourceMappingURL=estilo.css.map */
