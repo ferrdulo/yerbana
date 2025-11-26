@@ -58,3 +58,20 @@ header {
     }
   }
 }
+
+/* Anular hover/focus/active del carrito del header porque hacía un efecto de hover raro*/
+.search-cart .carrito,
+.search-cart .carrito i {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}

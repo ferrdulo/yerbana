@@ -1,0 +1,82 @@
+/* Fondo */
+.choco-page {
+  background-color: #fcfff7;
+  padding: 50px 0;
+}
+
+/* Título principal */
+.choco-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #3b5d1a;   
+  text-align: left;  
+  margin: 0 0 28px 0
+  padding-left 60px;
+}
+
+/* Tarjeta Bootstrap personalizada */
+.choco-card {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(30, 40, 20, 0.06);
+  transition: all .25s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(30, 40, 20, 0.12);
+  }
+}
+
+/* Imagen del chocolate */
+.choco-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+/* Título del producto */
+.choco-card .card-title {
+  color: #2c3a21;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Precio */
+.choco-price {
+  color: #4b8b0f;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Botón */
+.choco-btn {
+  background-color: #4b8b0f;
+  border: none;
+  padding: 10px 0;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: background-color .2s;
+
+  &:hover {
+    background-color: #3f7a0d;
+  }
+}
+
+.filtros-choco li {
+    padding: 8px 0;
+    color: #666;
+    font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .choco-title {
+    font-size: 36px;
+  }
+
+  .choco-card img {
+    height: 200px;
+  }
+}
