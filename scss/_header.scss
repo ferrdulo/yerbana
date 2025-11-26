@@ -18,13 +18,18 @@ header {
     h1 {
       color: $verde-oscuro;
       margin: 0;
+      font-family: 'Amatic SC', cursive;
+      font-weight: 700;
+      font-size: 48px;
+      letter-spacing: 2px;
     }
 
     p {
       color: $verde-medio;
-      font-weight: bold;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500, bold;
+      font-size: 16px;
       margin: 0;
-      font-size: 14px;
     }
   }
 

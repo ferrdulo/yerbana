@@ -4,7 +4,7 @@
 /* Layout general */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #ffffff;
   color: #4a4a4a;
 }
@@ -49,12 +49,17 @@ header .logo img {
 header .logo h1 {
   color: #4b8b0f;
   margin: 0;
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+  font-size: 48px;
+  letter-spacing: 2px;
 }
 header .logo p {
   color: #6ba329;
-  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500, bold;
+  font-size: 16px;
   margin: 0;
-  font-size: 14px;
 }
 header .search-cart {
   display: flex;
@@ -147,6 +152,111 @@ main {
   margin-top: 10px;
 }
 
+footer {
+  background-color: #fcfcfc;
+  border-top: 1px solid #ddd;
+  padding: 40px 0 20px;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+footer .footer-top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+footer {
+  /* Logo */
+}
+footer .footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+footer .footer-logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+footer .footer-logo h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #4b8b0f;
+}
+footer .footer-logo p {
+  margin: 0;
+  font-size: 14px;
+  color: #6ba329;
+  font-weight: bold;
+}
+footer {
+  /* Enlaces */
+}
+footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+footer .footer-links a {
+  color: #7bb661;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+footer .footer-links a:hover {
+  color: #3b6b1c;
+}
+footer {
+  /* Iconos */
+}
+footer .footer-iconos {
+  display: flex;
+  gap: 10px;
+}
+footer .footer-iconos a {
+  text-decoration: none;
+}
+footer .footer-iconos i {
+  background: #f7fce9;
+  padding: 10px;
+  border-radius: 10px;
+  color: #2f5216;
+  font-size: 18px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+footer .footer-iconos i:hover {
+  transform: translateY(-2px);
+  background: #eef7df;
+}
+footer {
+  /* CC */
+}
+footer .copyright {
+  display: block;
+  margin-top: 20px;
+  color: #aaa;
+  font-size: 13px;
+}
+footer .copyright a {
+  color: #7bb661;
+  text-decoration: none;
+  font-weight: bold;
+}
+footer .copyright a:hover {
+  color: #3b6b1c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  footer .footer-top {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
 .slider {
   position: relative;
   width: 100%;
