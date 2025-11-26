@@ -551,5 +551,118 @@ body {
     height: 200px;
   }
 }
+body {
+  background: #f8ffef;
+}
+
+/* MAIN: centrado y con separación */
+main.container {
+  max-width: 1300px;
+  margin-top: 40px;
+}
+
+/* Título */
+.titulo-carrito {
+  font-size: 60px;
+  font-weight: 700;
+  color: #4f7a45;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+/* Arreglar columnas del carrito */
+.row {
+  display: flex;
+  gap: 40px;
+}
+
+/* IZQUIERDA — tabla del carrito */
+.col-lg-8 {
+  flex: 1 1 65%;
+}
+
+.carrito-box {
+  background: white;
+  border-radius: 16px;
+  padding: 40px !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Cabecera tabla */
+.carrito-box table thead {
+  background: #e7f5d8;
+}
+.carrito-box table thead th {
+  color: #3f7f13;
+  font-size: 18px;
+  padding: 18px;
+}
+
+.carrito-box tbody td {
+  font-size: 18px;
+  padding: 20px 18px;
+}
+
+/* Input cantidad */
+.cantidad-input {
+  width: 90px;
+  border-radius: 10px;
+  border: 1px solid #e7f5d8;
+}
+.cantidad-input:focus {
+  border-color: #3f7f13;
+  box-shadow: 0 0 0 2px rgba(63, 127, 19, 0.25);
+}
+
+/* DERECHA — resumen de pago */
+.col-lg-4 {
+  flex: 1 1 35%;
+  display: flex;
+}
+
+.resumen-total {
+  background: #e7f5d8;
+  padding: 35px !important;
+  border-radius: 16px;
+  width: 100%;
+  height: fit-content;
+  position: sticky;
+  top: 120px;
+}
+
+/* Total */
+.resumen-total h3 {
+  font-size: 30px;
+  color: #333;
+}
+.resumen-total h3 span {
+  color: #3f7f13;
+  font-weight: 700;
+}
+
+/* Botón pagar */
+.pagar {
+  background: #3f7f13 !important;
+  color: white !important;
+  border-radius: 14px;
+  font-size: 20px;
+  transition: 0.2s;
+}
+.pagar:hover {
+  background: rgb(47.5952054795, 95.945890411, 14.354109589) !important;
+}
+
+/* Footer */
+footer {
+  margin-top: 120px;
+}
+
+/* Footer centrado */
+footer .footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 80px;
+}
 
 /*# sourceMappingURL=estilo.css.map */

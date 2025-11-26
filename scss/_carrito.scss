@@ -1,0 +1,122 @@
+$bg: #f8ffef;
+$verde: #3f7f13;
+$verde-suave: #e7f5d8;
+$gris: #333;
+
+body {
+  background: $bg;
+}
+
+/* MAIN: centrado y con separación */
+main.container {
+    max-width: 1300px;
+    margin-top: 40px;
+}
+
+/* Título */
+.titulo-carrito {
+    font-size: 60px;
+    font-weight: 700;
+    color: $title-green;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+/* Arreglar columnas del carrito */
+.row {
+    display: flex;
+    gap: 40px;
+}
+
+/* IZQUIERDA — tabla del carrito */
+.col-lg-8 {
+    flex: 1 1 65%;
+}
+
+.carrito-box {
+    background: white;
+    border-radius: 16px;
+    padding: 40px !important;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* Cabecera tabla */
+.carrito-box table thead {
+    background: $verde-suave;
+
+    th {
+        color: $verde;
+        font-size: 18px;
+        padding: 18px;
+    }
+}
+
+.carrito-box tbody td {
+    font-size: 18px;
+    padding: 20px 18px;
+}
+
+/* Input cantidad */
+.cantidad-input {
+    width: 90px;
+    border-radius: 10px;
+    border: 1px solid $verde-suave;
+
+    &:focus {
+        border-color: $verde;
+        box-shadow: 0 0 0 2px rgba($verde, 0.25);
+    }
+}
+
+/* DERECHA — resumen de pago */
+.col-lg-4 {
+    flex: 1 1 35%;
+    display: flex;
+}
+
+.resumen-total {
+    background: $verde-suave;
+    padding: 35px !important;
+    border-radius: 16px;
+    width: 100%;
+    height: fit-content;
+    position: sticky;
+    top: 120px;
+}
+
+/* Total */
+.resumen-total h3 {
+    font-size: 30px;
+    color: $gris;
+
+    span {
+        color: $verde;
+        font-weight: 700;
+    }
+}
+
+/* Botón pagar */
+.pagar {
+    background: $verde !important;
+    color: white !important;
+    border-radius: 14px;
+    font-size: 20px;
+    transition: 0.2s;
+
+    &:hover {
+        background: darken($verde, 7%) !important;
+    }
+}
+
+/* Footer */
+footer {
+    margin-top: 120px;
+}
+
+/* Footer centrado */
+footer .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 80px;
+}
