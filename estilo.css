@@ -308,6 +308,231 @@ footer .copyright a:hover {
   right: 10px;
 }
 
-/* estilos de productos */
+/* Layout principal del detalle */
+.producto-detalle {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 48px;
+  width: 90%;
+  margin: 48px auto;
+  align-items: start;
+}
+
+.producto-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Info */
+.producto-info h2 {
+  font-size: 44px;
+  margin: 0 0 18px 0;
+  color: #2e2e2e;
+}
+
+.descripcion {
+  color: #666;
+  line-height: 1.75;
+  margin-bottom: 18px;
+  font-size: 17px;
+}
+
+/* Precio destacado */
+.precio {
+  font-size: 28px;
+  font-weight: 700;
+  color: #4b8b0f;
+  margin-bottom: 10px;
+}
+
+/* Disponibilidad */
+.disponibilidad {
+  margin-bottom: 18px;
+  color: #444;
+}
+
+.disponibilidad span {
+  color: #4b8b0f;
+  font-weight: 700;
+}
+
+/* Botones: antes del hover -> fondo TRANSPARENTE y texto VERDE.
+   Al hover -> fondo verde oscuro y texto blanco. */
+.botones {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+/* Estilo base común */
+.botones button {
+  padding: 12px 22px;
+  border-radius: 10px;
+  border: 2px solid #4b8b0f;
+  background: transparent;
+  color: #4b8b0f;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.12s ease;
+  box-shadow: none;
+}
+
+/* Comprar: al hover se rellena en verde oscuro */
+.comprar:hover {
+  background: #3b6b1c;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.carrito:hover {
+  background: #3b6b1c;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .producto-detalle {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .producto-img img {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}
+/* Paleta suave / fondo de bloques */
+/* Nuevo color para títulos */
+body {
+  background-color: #fcfff7;
+}
+
+/* Layout */
+.infusiones-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 48px;
+  width: 92%;
+  margin: 38px auto;
+  align-items: start;
+}
+
+/* Columnita izquierda (categorías) */
+.categorias {
+  background: transparent;
+  padding-right: 8px;
+}
+
+.categorias h2 {
+  font-size: 30px;
+  margin-bottom: 14px;
+  color: #4f7a45;
+}
+
+.categorias ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.categorias li {
+  padding: 10px 0;
+  color: #666;
+  font-size: 16.5px;
+  border-bottom: 0;
+}
+
+/* Sección productos: título y grid */
+.productos h1 {
+  font-size: 44px;
+  margin: 0 0 28px 0;
+  color: #4f7a45;
+  font-weight: 700;
+}
+
+/* Grid de tarjetas - tamaño comedido y ordenado */
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px;
+}
+
+/* Cada producto como tarjeta */
+.producto {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: left;
+  box-shadow: 0 6px 18px rgba(30, 40, 20, 0.04);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Hover agradable en la tarjeta */
+.producto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(30, 40, 20, 0.08);
+}
+
+/* Imagen recortada y centrada */
+.producto img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #fff;
+  padding: 10px;
+}
+
+/* Título de producto */
+.producto h3 {
+  margin: 6px 0 4px 0;
+  font-size: 18px;
+  color: #2f3b2a;
+  font-weight: 600;
+}
+
+/* Quitar subrayado del enlace */
+.producto a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Precio */
+.producto p {
+  color: #4b8b0f;
+  font-weight: 600;
+  margin: 6px 0 0 0;
+  font-size: 17px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .grid-productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contenido {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .categorias {
+    order: 2;
+  }
+  .productos {
+    order: 1;
+  }
+}
+@media (max-width: 520px) {
+  .grid-productos {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .producto img {
+    height: 200px;
+  }
+}
 
 /*# sourceMappingURL=estilo.css.map */

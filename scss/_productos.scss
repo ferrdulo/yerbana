@@ -1,1 +1,95 @@
-/* estilos de productos */
+$accent: #4b8b0f;
+$accent-dark: #3b6b1c;
+$accent-soft: #eaf6dc;
+$muted: #666;
+
+/* Layout principal del detalle */
+.producto-detalle {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 48px;
+  width: 90%;
+  margin: 48px auto;
+  align-items: start;
+}
+
+.producto-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+/* Info */
+.producto-info h2 {
+  font-size: 44px;
+  margin: 0 0 18px 0;
+  color: #2e2e2e;
+}
+
+.descripcion {
+  color: $muted;
+  line-height: 1.75;
+  margin-bottom: 18px;
+  font-size: 17px;
+}
+
+/* Precio destacado */
+.precio {
+  font-size: 28px;
+  font-weight: 700;
+  color: $accent;
+  margin-bottom: 10px;
+}
+
+/* Disponibilidad */
+.disponibilidad {
+  margin-bottom: 18px;
+  color: #444;
+}
+.disponibilidad span { color: $accent; font-weight: 700; }
+
+/* Botones: antes del hover -> fondo TRANSPARENTE y texto VERDE.
+   Al hover -> fondo verde oscuro y texto blanco. */
+.botones {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+/* Estilo base común */
+.botones button {
+  padding: 12px 22px;
+  border-radius: 10px;
+  border: 2px solid $accent;
+  background: transparent;
+  color: $accent;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background .18s ease, color .18s ease, transform .12s ease;
+  box-shadow: none;
+}
+
+/* Comprar: al hover se rellena en verde oscuro */
+.comprar:hover {
+  background: $accent-dark;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.carrito:hover {
+  background: $accent-dark;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .producto-detalle {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .producto-img img {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}
