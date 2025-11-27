@@ -1,0 +1,97 @@
+// ===== PALETA Y VARIABLES =====
+$bg: #f8ffef;
+$verde: #3f7f13;
+$verde-suave: #e7f5d8;
+$gris: #444;
+
+// ===== FONDO GENERAL =====
+#auth-page {
+  min-height: 100vh;
+  background: $bg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 15px;
+}
+
+// ===== CONTENEDOR DEL FORMULARIO =====
+.auth-card {
+  width: 100%;
+  max-width: 460px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+// ===== TÍTULO =====
+.auth-card h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: $verde;
+  margin-bottom: 25px;
+}
+
+// ===== INPUTS =====
+.auth-input {
+  border: 1px solid $verde-suave !important;
+  border-radius: 12px !important;
+  padding: 12px 16px !important;
+  height: 48px;
+  font-size: 16px;
+
+  &:focus {
+    border-color: $verde !important;
+    box-shadow: 0 0 0 2px rgba($verde, 0.25) !important;
+  }
+}
+
+// ===== BOTÓN PRINCIPAL =====
+.auth-btn {
+  background: $verde;
+  color: white;
+  border-radius: 12px;
+  padding: 12px;
+  width: 100%;
+  font-size: 18px;
+  transition: 0.2s ease;
+
+  &:hover {
+    background: darken($verde, 8%);
+  }
+}
+
+// ===== ENLACE PEQUEÑO =====
+.auth-link {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 15px;
+  text-decoration: none;
+  color: $verde;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// ===== MENSAJE DE ERROR / AVISO (por si lo necesitas) =====
+.auth-alert {
+  padding: 12px;
+  border-radius: 10px;
+  background: #ffefef;
+  color: #a33;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+// ===== RESPONSIVE =====
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 28px;
+  }
+
+  .auth-card h2 {
+    font-size: 30px;
+  }
+}
