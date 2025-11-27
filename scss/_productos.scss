@@ -49,8 +49,7 @@ $muted: #666;
 }
 .disponibilidad span { color: $accent; font-weight: 700; }
 
-/* Botones: antes del hover -> fondo TRANSPARENTE y texto VERDE.
-   Al hover -> fondo verde oscuro y texto blanco. */
+/* Botones */
 .botones {
   display: flex;
   gap: 18px;
