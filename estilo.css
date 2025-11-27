@@ -571,7 +571,7 @@ main.container {
 }
 
 /* Arreglar columnas del carrito */
-.row {
+.carrito-layout {
   display: flex;
   gap: 40px;
 }
@@ -721,6 +721,8 @@ body {
   border-radius: 12px;
   font-size: 18px;
   transition: 0.2s;
+  border: none !important;
+  box-shadow: none !important;
 }
 .btn-pagar:hover {
   background: rgb(47.5952054795, 95.945890411, 14.354109589);
